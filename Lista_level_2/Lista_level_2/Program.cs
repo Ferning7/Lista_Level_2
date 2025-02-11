@@ -167,31 +167,31 @@ namespace Lista_level_2
 							case 1:
 								Console.WriteLine("Cálculo da área do Triângulo");
 								Console.WriteLine("A = área  B = Base  H = altura");		
-								int A, B, H;
+								int AreaT, B, H;
 								Console.Write("A:");
-								A = int.Parse(Console.ReadLine());
+								AreaT = int.Parse(Console.ReadLine());
 								Console.Write("B:");
 								B = int.Parse(Console.ReadLine());
 								Console.Write("h:");
 								H = int.Parse(Console.ReadLine());
 								
 								Console.WriteLine("A = b * h / 2");
-								Console.WriteLine("Área: ({0}) = {1} * {2} / {3}", A, B, H, (B*H)/2);
+								Console.WriteLine("Área: ({0}) = {1} * {2} / {3}", AreaT, B, H, (B*H)/2);
 		
 								break;
+								
 							case 2:
-								Console.WriteLine("Cálculo da área do Triângulo");
-								Console.WriteLine("A = área  B = Base  H = altura");		
-								int A, B, H;
+								Console.WriteLine("Cálculo da área do Quadrado");
+								Console.WriteLine("A = Área  L = Lado");		
+								int AreaQ, L;
 								Console.Write("A:");
-								A = int.Parse(Console.ReadLine());
-								Console.Write("B:");
-								B = int.Parse(Console.ReadLine());
-								Console.Write("h:");
-								H = int.Parse(Console.ReadLine());
+								AreaQ = int.Parse(Console.ReadLine());
+								Console.Write("L:");
+								L = int.Parse(Console.ReadLine());
+								
 								
 								Console.WriteLine("A = b * h / 2");
-								Console.WriteLine("Área: ({0}) = {1} * {2} / {3}", A, B, H, (B*H)/2);
+								break;
 						}
 						Console.ReadKey(true);
 						break;
