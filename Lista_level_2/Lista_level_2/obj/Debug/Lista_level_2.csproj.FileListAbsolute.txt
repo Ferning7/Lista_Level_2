@@ -1,0 +1,6 @@
+C:\Users\Aluno_Tarde\Documents\SharpDevelop Projects\Lista_level_2\Lista_level_2\obj\Debug\Lista_level_2.csprojResolveAssemblyReference.cache
+C:\Users\Aluno_Tarde\Documents\SharpDevelop Projects\Lista_level_2\Lista_level_2\bin\Debug\Lista_level_2.exe.config
+C:\Users\Aluno_Tarde\Documents\SharpDevelop Projects\Lista_level_2\Lista_level_2\bin\Debug\Lista_level_2.exe
+C:\Users\Aluno_Tarde\Documents\SharpDevelop Projects\Lista_level_2\Lista_level_2\bin\Debug\Lista_level_2.pdb
+C:\Users\Aluno_Tarde\Documents\SharpDevelop Projects\Lista_level_2\Lista_level_2\obj\Debug\Lista_level_2.exe
+C:\Users\Aluno_Tarde\Documents\SharpDevelop Projects\Lista_level_2\Lista_level_2\obj\Debug\Lista_level_2.pdb
