@@ -10,11 +10,12 @@ namespace Lista_level_2
 			int sair = 1;
 			int opcao = 0;
 			
+			
 			while (sair == 1){
 				Console.Clear();
 				Console.WriteLine("------------ MENU DE ATIVIDADES ------------");
 				Console.WriteLine("(Pressione '0' para sair)");
-				Console.WriteLine("Escolha uma opção de 1 ao 12: ");
+				Console.WriteLine("Escolha uma opção de 1 ao 20: ");
 				opcao = int.Parse(Console.ReadLine());
 				Console.Clear();
 				
@@ -97,8 +98,45 @@ namespace Lista_level_2
 						
 						Console.WriteLine("Atividade 03");
 						
-						Console.WriteLine("Digite uma letra: ");
+						Console.Write("Digite um dígito (0-9): ");
+						int digito = int.Parse(Console.ReadLine());
 						
+						switch (digito) {
+							case 0:
+								Console.WriteLine("Zero");
+								break;
+							case 1:
+								Console.WriteLine("Um");
+								break;
+							case 2:
+								Console.WriteLine("Dois");
+								break;
+							case 3:
+								Console.WriteLine("Três");
+								break;
+							case 4:
+								Console.WriteLine("Quatro");
+								break;
+							case 5:
+								Console.WriteLine("Cinco");
+								break;
+							case 6:
+								Console.WriteLine("Seis");
+								break;
+							case 7:
+								Console.WriteLine("Sete");
+								break;
+							case 8:
+								Console.WriteLine("Oito");
+								break;
+							case 9:
+								Console.WriteLine("Nove");
+								break;
+							default:
+								Console.WriteLine("Dígito inválido");
+								break;
+						}
+						Console.ReadKey(true);
 						break;
 						
 					case 4:
@@ -146,7 +184,7 @@ namespace Lista_level_2
 								Console.WriteLine("Dezembro");
 								break;
 								
-								default:
+							default:
 								Console.WriteLine("Mês Inválido");
 								break;
 						}
@@ -156,42 +194,93 @@ namespace Lista_level_2
 					case 5:
 						/* 5. Escreva um programa em C# que seja um programa orientado por menus
 						para calcular a área das várias formas geométricas.*/
-						Console.WriteLine("Atividade 05");
 						
-						Console.WriteLine("Escolha uma opção para calcular a área:");
-						
-						Console.WriteLine("1) Triângulo\n2) Quadrado\n3) Retangulo\n4) Círculo");
-						int escolha = int.Parse(Console.ReadLine());
-						
-						switch (escolha) {
-							case 1:
-								Console.WriteLine("Cálculo da área do Triângulo");
-								Console.WriteLine("A = área  B = Base  H = altura");		
-								int AreaT, B, H;
-								Console.Write("A:");
-								AreaT = int.Parse(Console.ReadLine());
-								Console.Write("B:");
-								B = int.Parse(Console.ReadLine());
-								Console.Write("h:");
-								H = int.Parse(Console.ReadLine());
-								
-								Console.WriteLine("A = b * h / 2");
-								Console.WriteLine("Área: ({0}) = {1} * {2} / {3}", AreaT, B, H, (B*H)/2);
-		
-								break;
-								
-							case 2:
-								Console.WriteLine("Cálculo da área do Quadrado");
-								Console.WriteLine("A = Área  L = Lado");		
-								int AreaQ, L;
-								Console.Write("A:");
-								AreaQ = int.Parse(Console.ReadLine());
-								Console.Write("L:");
-								L = int.Parse(Console.ReadLine());
-								
-								
-								Console.WriteLine("A = b * h / 2");
-								break;
+						int sair2 = 1;
+						while (sair2 == 1) {
+							
+							Console.WriteLine("Atividade 05");
+							
+							Console.WriteLine("Escolha uma opção para calcular a área:");
+							Console.WriteLine("Digite 0 para voltar pro Menu...");
+							Console.Write("1) Triângulo\n2) Quadrado\n3) Retangulo\n4) Círculo\n:");
+							int escolha = int.Parse(Console.ReadLine());
+							
+							
+							
+							
+							switch (escolha) {
+								case 1:
+									Console.WriteLine("Cálculo da área do Triângulo");
+									Console.WriteLine("A = área  B = Base  H = altura");
+									int B, H;
+									Console.Write("B:");
+									B = int.Parse(Console.ReadLine());
+									Console.Write("h:");
+									H = int.Parse(Console.ReadLine());
+									
+									Console.WriteLine("\nA = b * h / 2");
+									Console.WriteLine("A área do triangulo será: {0}", (B*H)/2);
+									Console.WriteLine("\nPressione algo para continuar..");
+									Console.ReadKey(true);
+									Console.Clear();
+									break;
+									
+								case 2:
+									Console.WriteLine("Cálculo da área do Quadrado");
+									Console.WriteLine("A = Área  L = Lado");
+									int L;
+									Console.Write("L:");
+									L = int.Parse(Console.ReadLine());
+									
+									Console.WriteLine("\nA = L * L");
+									Console.WriteLine("A área do quadrado será A = {0}", L*L);
+									Console.WriteLine("\nPressione algo para continuar..");
+									Console.ReadKey(true);
+									Console.Clear();
+									break;
+									
+								case 3:
+									Console.WriteLine("Cálculo da área do Retangulo");
+									Console.WriteLine("A = Área  B = Base  H = Altura");
+									int Base, Haltura;
+									Console.Write("B:");
+									Base = int.Parse(Console.ReadLine());
+									Console.Write("h:");
+									Haltura = int.Parse(Console.ReadLine());
+									
+									Console.WriteLine("\nA = b * h");
+									Console.WriteLine("A área do retângulo será: A = {0}", Base*Haltura);
+									Console.WriteLine("\nPressione algo para continuar..");
+									Console.ReadKey(true);
+									Console.Clear();
+									break;
+									
+								case 4:
+									Console.WriteLine("Cálculo da área do Círculo");
+									Console.WriteLine("A = Área  π = Constante Pi(3,14)  R = Raio");
+									Console.Write("π: ");
+									float Pi = 3.14F;
+									float raio =float.Parse(Console.ReadLine());
+									
+									
+									Console.WriteLine("\nA = π * r*r");
+									Console.WriteLine("A área do círculo será A = {0}", Pi * (raio*raio));
+									Console.WriteLine("\nPressione algo para continuar..");
+									Console.ReadKey(true);
+									Console.Clear();
+									break;
+									
+								case 0:
+									
+									Console.ReadKey(true);
+									sair2 = 0;
+									Console.Clear();
+									break;
+									
+								default:
+									Console.WriteLine("Clique para continuar...");
+									break;
+							}
 						}
 						Console.ReadKey(true);
 						break;
@@ -199,14 +288,90 @@ namespace Lista_level_2
 						/* 6. Escreva um programa em C# que seja um Programa Orientado por Menu
 						para realizar cálculos simples(soma, subtração, multiplicação e divisão).*/
 						
+						int sair3 = 1;
+						while (sair3 == 1) {
+							Console.WriteLine("Atividade 06");
+							
+							Console.WriteLine("Digite dois números: ");
+							int num1 = int.Parse(Console.ReadLine());
+							int num2 = int.Parse(Console.ReadLine());
+							
+							Console.Write("1) Soma\n2) Subtração\n3) Multiplicação\n4) Divisão\n:");
+							
+							int esc = int.Parse(Console.ReadLine());
+							
+							switch (esc) {
+								case 1:
+									Console.WriteLine("Somando {0} + {1} = {2}",num1, num2, num1+num2);
+									break;
+								case 2:
+									Console.WriteLine("Subtraindo {0} + {1} = {2}", num1, num2, num1-num2);
+									break;
+								case 3:
+									Console.WriteLine("Multiplicando {0} x {1} = {2}", num1, num2, num1*num2);
+									break;
+								case 4:
+									Console.WriteLine("Dividindo {0} / {1} = {2}", num1, num2, num1*num2);
+									break;
+							}
+						}
+						Console.ReadKey(true);
+						break;
+						
+					case 7:
+						/*7. Escreva um programa em C# para exibir os 10 primeiros números
+						naturais.*/
+						
+						Console.WriteLine("Atividade 07");
+						
+						for (int i = 0; i < 10; i++) {
+							Console.Write("{0} ", i);
+						}
+						
+						Console.ReadKey(true);
+						break;
+						
+					case 8:
+						
+					case 15:
+						/*while (i2 < n) {
+							if(i2 % 2 == 0){
+								soma2 += i2;
+							}
+							i2++
+						}
+						*/
+					case 10:
+						/*10. Escreva um programa em C# para ler 10 números do teclado e
+						encontrar sua soma e média.*/
+						
+						int num = 0;
+						float media = 0.0f;
+						float soma = 0.0f;
+						
+						Console.WriteLine("Insira 10 números para somar e encontrar a média: ");
+						for (int i = 1; i <= 10; i++) {
+							Console.Write("{0}° Número: ", i);
+							num = int.Parse(Console.ReadLine());
+							soma += num;
+							
+						}
+						
+						media = soma / 10;
+						
+						Console.WriteLine("A soma destes números é: {0}", soma);
+						Console.WriteLine("A média destes números é: {0}", media);
+						
+						Console.ReadKey(true);
+						break;
 					case 0:
-						Console.WriteLine("Saindo... ");
 						sair = 0;
 						break;
 					default:
 						Console.WriteLine("Opção Inválida");
 						break;
 				}
+				
 			}
 			
 		}
