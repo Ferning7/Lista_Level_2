@@ -9,13 +9,15 @@ namespace Lista_level_2
 		{
 			int sair = 1;
 			int opcao = 0;
-			
+			DateTime dataHora = DateTime.Now;
 			
 			while (sair == 1){
 				Console.Clear();
+				
 				Console.WriteLine("------------ MENU DE ATIVIDADES ------------");
-				Console.WriteLine("(Pressione '0' para sair)");
+				Console.WriteLine("Data de Acesso: {0}", dataHora);
 				Console.WriteLine("Escolha uma opção de 1 ao 20: ");
+				Console.WriteLine("(Pressione '0' para sair)");
 				opcao = int.Parse(Console.ReadLine());
 				Console.Clear();
 				
@@ -205,9 +207,6 @@ namespace Lista_level_2
 							Console.Write("1) Triângulo\n2) Quadrado\n3) Retangulo\n4) Círculo\n:");
 							int escolha = int.Parse(Console.ReadLine());
 							
-							
-							
-							
 							switch (escolha) {
 								case 1:
 									Console.WriteLine("Cálculo da área do Triângulo");
@@ -332,15 +331,42 @@ namespace Lista_level_2
 						break;
 						
 					case 8:
+						/*8. Escreva um programa em C# para encontrar a soma dos 10 primeiros
+						números naturais.*/
 						
-					case 15:
-						/*while (i2 < n) {
-							if(i2 % 2 == 0){
-								soma2 += i2;
-							}
-							i2++
+						Console.WriteLine("Atividade 08");
+						
+						int soma3 = 0;
+						
+						for (int i = 0; i < 10; i++) {
+							Console.Write("{0} ", i);
+							soma3 += i;
 						}
-						*/
+						Console.WriteLine("\nA soma de todos números será: {0}", soma3);
+						
+						Console.ReadKey(true);
+						break;
+						
+					case 9:
+						/*9. Escreva um programa em C# para exibir n termos de números naturais e
+						sua soma.*/
+						
+						Console.WriteLine("Atividade 09");
+						
+						Console.WriteLine("Digite a quantidade de termos: ");
+						int num4 = int.Parse(Console.ReadLine());
+						
+						int soma4 = 0;
+						
+						for (int i = 0; i <= num4; i++) {
+							Console.Write("{0} ", i);
+							soma4 += i;
+						}
+						
+						Console.WriteLine("\n\nA soma de todos termos será: {0}", soma4);
+						Console.ReadKey(true);
+						break;
+						
 					case 10:
 						/*10. Escreva um programa em C# para ler 10 números do teclado e
 						encontrar sua soma e média.*/
@@ -362,6 +388,121 @@ namespace Lista_level_2
 						Console.WriteLine("A soma destes números é: {0}", soma);
 						Console.WriteLine("A média destes números é: {0}", media);
 						
+						Console.ReadKey(true);
+						break;
+						
+					case 11:
+						/*11. Escreva um programa em C# para exibir o cubo do número até a
+						quantidade digitada pelo usuário.*/
+						
+						Console.WriteLine("Atividade 11");
+						
+						Console.WriteLine("Digite um número: ");
+						int numero = int.Parse(Console.ReadLine());
+						int cubo = 0;
+						
+						for (int i = 0; i <= numero; i++) {
+							cubo = i * i * i;
+							Console.WriteLine("{0}³ é igual à {1}", i, cubo);
+						}
+						Console.ReadKey(true);
+						break;
+						
+					case 12:
+						/*12. Escreva um programa em C# para exibir a tabela de multiplicação de
+						um determinado número inteiro.*/
+						
+						Console.WriteLine("Atividade 12");
+						
+						Console.WriteLine("Digite um número: ");
+						int numero01 = int.Parse(Console.ReadLine());
+						
+						for (int i = 1; i <= numero01; i++) {
+							Console.WriteLine("{0} x {1} = {2}", i, numero01, i * numero01);
+						}
+						Console.ReadKey(true);
+						break;
+						
+					case 13:
+						/*13. Escreva um programa em C# para exibir os n termos do número natural
+						ímpar e sua soma.*/
+						
+						Console.WriteLine("Atividade 13");
+						
+						Console.WriteLine("Digite um número: ");
+						int numeros02 = int.Parse(Console.ReadLine());
+						int somaNimpar = 0;
+						for (int i = 0; i <= numeros02; i++) {
+							if (i % 2 != 0) {
+								somaNimpar += i;
+								Console.WriteLine("Números ímpares: {0}", i);
+							}
+						}
+						Console.WriteLine("A soma dos números ímpares: {0}", somaNimpar);
+						Console.ReadKey(true);
+						break;
+						
+					case 14:
+						/*14. Escreva um programa C# para imprimir as letras do alfabeto de a até z.*/
+						Console.WriteLine("Atividade 14");
+						for (char i = 'A'; i <= 'Z'; i++) {
+							Console.Write("{0} ",i);
+						}
+						
+						Console.ReadKey(true);
+						break;
+						
+					case 15:
+						/*15. Escreva um programa C# para encontrar a soma de números pares
+						entre 1 e n.*/
+						Console.WriteLine("Atividade 15");
+						int i2 = 0;
+						int n = 0;
+						int soma2 = 0;
+						
+						Console.WriteLine("Digite um valor: ");
+						n = int.Parse(Console.ReadLine());
+						Console.WriteLine("Deseja usar: \n1)For\n2)While");
+						int escoulha = int.Parse(Console.ReadLine());
+						
+						if(escoulha == 1){
+							for (int i = 0; i < n; i++) {
+								if(i % 2 == 0){
+									soma2 += i;
+									Console.Write("{0} ", i);
+								}
+							}
+							Console.WriteLine("\nA soma dos números pares é: {0}", soma2);
+						} else if (escoulha == 2) {
+							
+							while (i2 < n) {
+								if(i2 % 2 == 0){
+									soma2 += i2;
+									Console.Write("{0} ", i2);
+								}
+								i2++;
+							}
+							Console.WriteLine("\nA soma dos números pares é: {0}", soma2);
+						}
+						
+						
+						
+						Console.ReadKey(true);
+						break;
+						
+					case 16:
+						/* 16. Escreva um programa em C# para calcular o fatorial de um determinado
+						número.*/
+						Console.WriteLine("Atividade 16");
+						
+						Console.WriteLine("Digite um número: ");
+						int numeor = int.Parse(Console.ReadLine());
+						int soma1 = 0;
+						
+						for (int i = numeor; i >= 0; i--) {
+							soma1 += i;
+							Console.WriteLine("{0}! = {1}", i, soma1);
+						}
 						Console.ReadKey(true);
 						break;
 					case 0:
