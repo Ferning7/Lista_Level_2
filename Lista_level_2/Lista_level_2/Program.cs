@@ -1,4 +1,4 @@
-﻿
+
 using System;
 
 namespace Lista_level_2
@@ -16,9 +16,11 @@ namespace Lista_level_2
 				
 				Console.WriteLine("------------ MENU DE ATIVIDADES ------------");
 				Console.WriteLine("Data de Acesso: {0}", dataHora);
-				Console.WriteLine("Escolha uma opção de 1 ao 20: ");
 				Console.WriteLine("(Pressione '0' para sair)");
+				Console.Write("Escolha uma opção de 1 ao 20: ");
 				opcao = int.Parse(Console.ReadLine());
+				
+				
 				Console.Clear();
 				
 				
@@ -289,13 +291,17 @@ namespace Lista_level_2
 						
 						int sair3 = 1;
 						while (sair3 == 1) {
-							Console.WriteLine("Atividade 06");
+							Console.WriteLine("\nAtividade 06");
 							
-							Console.WriteLine("Digite dois números: ");
+							
+							Console.WriteLine("\nDigite dois números: ");
 							int num1 = int.Parse(Console.ReadLine());
 							int num2 = int.Parse(Console.ReadLine());
-							
+							Console.Write("\n(Digite 0 para sair)\n");
+							Console.WriteLine("Selecione uma operação:");
 							Console.Write("1) Soma\n2) Subtração\n3) Multiplicação\n4) Divisão\n:");
+							
+							
 							
 							int esc = int.Parse(Console.ReadLine());
 							
@@ -304,17 +310,22 @@ namespace Lista_level_2
 									Console.WriteLine("Somando {0} + {1} = {2}",num1, num2, num1+num2);
 									break;
 								case 2:
-									Console.WriteLine("Subtraindo {0} + {1} = {2}", num1, num2, num1-num2);
+									Console.WriteLine("Subtraindo {0} - {1} = {2}", num1, num2, num1-num2);
 									break;
 								case 3:
 									Console.WriteLine("Multiplicando {0} x {1} = {2}", num1, num2, num1*num2);
 									break;
 								case 4:
-									Console.WriteLine("Dividindo {0} / {1} = {2}", num1, num2, num1*num2);
+									Console.WriteLine("Dividindo {0} / {1} = {2}", num1, num2, num1/num2);
+									break;
+								case 0:
+									
+									sair3 = 0;
+									Console.Clear();
 									break;
 							}
 						}
-						Console.ReadKey(true);
+						
 						break;
 						
 					case 7:
@@ -401,7 +412,7 @@ namespace Lista_level_2
 						int numero = int.Parse(Console.ReadLine());
 						int cubo = 0;
 						
-						for (int i = 0; i <= numero; i++) {
+						for (int i = 1; i <= numero; i++) {
 							cubo = i * i * i;
 							Console.WriteLine("{0}³ é igual à {1}", i, cubo);
 						}
@@ -495,14 +506,80 @@ namespace Lista_level_2
 						número.*/
 						Console.WriteLine("Atividade 16");
 						
-						Console.WriteLine("Digite um número: ");
+						Console.WriteLine("Digite um número (max: 12): ");
 						int numeor = int.Parse(Console.ReadLine());
-						int soma1 = 0;
+						int fatorial = 1;
 						
-						for (int i = numeor; i >= 0; i--) {
-							soma1 += i;
-							Console.WriteLine("{0}! = {1}", i, soma1);
+						for (int i = 1; i <= numeor; i++) {
+							fatorial *=  i;
+							Console.WriteLine("{0}! = {1}", i, fatorial);
 						}
+						Console.ReadKey(true);
+						break;
+						
+					case 17:
+						/*17. Escreva um programa em C# para exibir o padrão como triângulo de
+						ângulo reto usando um asterisco. */
+						Console.WriteLine("Atividade 17");
+						
+						Console.WriteLine("");
+						for (int i = 1; i <= 5; i++) {
+							for (int j = 1; j <= i; j++) {
+								Console.Write(" *");
+							}
+							Console.WriteLine(" ");
+						}
+						
+						Console.ReadKey(true);
+						break;
+						
+					case 18:
+						/*18. Escreva um programa em C# para criar um padrão como triângulo de
+						ângulo reto com números iguais que repetirá um número em cada linha.
+						O padrão é o seguinte:*/
+						Console.WriteLine("Atividade 18");
+						
+						Console.WriteLine("");
+						for (int i = 1; i <= 5; i++) {
+							for (int j = 1; j <= i; j++) {
+								Console.Write(i);
+							}
+							Console.WriteLine(" ");
+						}
+						
+						Console.ReadKey(true);
+						break;
+						
+					case 19:
+						/*19. Escreva um programa em C# para exibir a tabuada de multiplicação
+						verticalmente de 1 a n.*/
+						
+						Console.WriteLine("Atividade 19");
+						
+						Console.WriteLine("Digite um número: ");
+						int numero04 = int.Parse(Console.ReadLine());
+						
+						for (int i = 1; i <= numero04; i++) {
+							Console.WriteLine("{0}\nx\n{1}\n=\n{2}\n",i, numero04, i * numero04);
+						}
+						Console.ReadKey(true);
+						break;
+						
+					case 20:
+						/*20. Escreva um programa C# para encontrar a soma do primeiro e do
+						último dígito de qualquer número.*/
+						
+						Console.WriteLine("Atividade 20");
+						Console.Write("Digite um número: ");
+						int num01 = int.Parse(Console.ReadLine());
+						
+						int lastDigit = num01 % 10; 
+						int firstDigit = num01;
+						
+						for (; firstDigit >= 10; firstDigit /= 10) {}
+						
+						int sum = firstDigit + lastDigit;
+						Console.WriteLine("A soma do primeiro e do último dígito é: {0}", sum);
 						Console.ReadKey(true);
 						break;
 					case 0:
