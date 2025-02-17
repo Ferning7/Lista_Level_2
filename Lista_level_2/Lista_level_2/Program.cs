@@ -396,14 +396,30 @@ namespace Lista_level_2
 						Console.WriteLine("Digite a quantidade de termos: ");
 						int num4 = int.Parse(Console.ReadLine());
 						
+						Console.WriteLine("Escolha uma opção: ");
+						Console.WriteLine("1) For\n2) While");
+						int escolha1 = int.Parse(Console.ReadLine());
+						
+						int soma5 = 0;
 						int soma4 = 0;
+						int num5 = 0;
 						
-						for (int i = 0; i <= num4; i++) {
-							Console.Write("{0} ", i);
-							soma4 += i;
+						if (escolha1 == 1) {
+							for (int i = 0; i <= num4; i++) {
+								Console.Write("{0} ", i);
+								soma4 += i;
+							}
+							Console.WriteLine("\n\nA soma de todos termos será: {0}", soma4);
+							
+						} else if (escolha1 == 2) {
+							while (num5 <= num4) {
+								Console.Write("{0} ", num5);
+								soma5 += num5;
+								num5++;
+							}
 						}
+						Console.WriteLine("\n\nA soma de todos termos será: {0}", soma5);
 						
-						Console.WriteLine("\n\nA soma de todos termos será: {0}", soma4);
 						Console.ReadKey(true);
 						break;
 						
@@ -603,22 +619,20 @@ namespace Lista_level_2
 						Console.Write("Digite um número: ");
 						int num01 = int.Parse(Console.ReadLine());
 						
-<<<<<<< HEAD
+
 						int ultiDigit = num01 % 10;
 						int primDigit = num01;
 						
 						for (; primDigit >= 10; primDigit /= 10) {}
 						
 						int sum = primDigit + ultiDigit;
-=======
-						int lastDigit = num01 % 10; 
+						int lastDigit = num01 % 10;
 						int firstDigit = num01;
 						
 						for (; firstDigit >= 10; firstDigit /= 10) {}
 						
-						int sum = firstDigit + lastDigit;
->>>>>>> 1190b3505672faf6ef88d23349cfb1c5faf5b1d8
-						Console.WriteLine("A soma do primeiro e do último dígito é: {0}", sum);
+						int sum1 = firstDigit + lastDigit;
+						Console.WriteLine("A soma do primeiro e do último dígito é: {0}", sum1);
 						Console.ReadKey(true);
 						break;
 					case 0:
