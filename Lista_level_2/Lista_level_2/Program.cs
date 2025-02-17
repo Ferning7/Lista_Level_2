@@ -1,4 +1,4 @@
-﻿
+
 using System;
 
 namespace Lista_level_2
@@ -566,7 +566,10 @@ namespace Lista_level_2
 						/*18. Escreva um programa em C# para criar um padrão como triângulo de
 						ângulo reto com números iguais que repetirá um número em cada linha.
 						O padrão é o seguinte:*/
+<<<<<<< HEAD
 						
+=======
+>>>>>>> 1190b3505672faf6ef88d23349cfb1c5faf5b1d8
 						Console.WriteLine("Atividade 18");
 						
 						Console.WriteLine("");
@@ -603,12 +606,21 @@ namespace Lista_level_2
 						Console.Write("Digite um número: ");
 						int num01 = int.Parse(Console.ReadLine());
 						
+<<<<<<< HEAD
 						int ultiDigit = num01 % 10;
 						int primDigit = num01;
 						
 						for (; primDigit >= 10; primDigit /= 10) {}
 						
 						int sum = primDigit + ultiDigit;
+=======
+						int lastDigit = num01 % 10; 
+						int firstDigit = num01;
+						
+						for (; firstDigit >= 10; firstDigit /= 10) {}
+						
+						int sum = firstDigit + lastDigit;
+>>>>>>> 1190b3505672faf6ef88d23349cfb1c5faf5b1d8
 						Console.WriteLine("A soma do primeiro e do último dígito é: {0}", sum);
 						Console.ReadKey(true);
 						break;
