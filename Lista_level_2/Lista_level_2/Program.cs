@@ -479,10 +479,10 @@ namespace Lista_level_2
 							Console.WriteLine("{0}³ é igual à {1}", i, cubo);
 						}
 						int w = 1;
-						while (w <= numero) {
+						/*while (w <= numero) {
 							Console.WriteLine("Cubo de {0}: {1}", w, Math.Pow(w, 3));
 						}
-						Console.ReadKey(true);
+						 */Console.ReadKey(true);
 						break;
 						
 					case 12:
@@ -512,7 +512,9 @@ namespace Lista_level_2
 						
 						Console.WriteLine("Digite um número: ");
 						int numeros02 = int.Parse(Console.ReadLine());
+						
 						int somaNimpar = 0;
+						
 						for (int i = 0; i <= numeros02; i++) {
 							if (i % 2 != 0) {
 								somaNimpar += i;
@@ -540,6 +542,13 @@ namespace Lista_level_2
 							Console.Write("{0} ",i);
 						}
 						
+						char letra = 'a';
+						
+						while (letra <= 'z')
+						{
+							Console.Write(letra + " ");
+							letra++;
+						}
 						Console.ReadKey(true);
 						break;
 						
@@ -594,6 +603,15 @@ namespace Lista_level_2
 							fatorial *=  i;
 							Console.WriteLine("{0}! = {1}", i, fatorial);
 						}
+						
+						int p = 1;
+						while (p <= numeor)
+						{
+							fatorial *= p;
+							p++;
+						}
+						
+						Console.WriteLine("{0}! = {1}",numeor, fatorial);
 						Console.ReadKey(true);
 						break;
 						
@@ -608,6 +626,19 @@ namespace Lista_level_2
 								Console.Write(" *");
 							}
 							Console.WriteLine(" ");
+						}
+						
+						int f = 1;
+						while (f <= 5)
+						{
+							int j = 1;
+							while (j <= f)
+							{
+								Console.Write("*");
+								j++;
+							}
+							Console.WriteLine();
+							f++;
 						}
 						
 						Console.ReadKey(true);
@@ -628,6 +659,19 @@ namespace Lista_level_2
 							Console.WriteLine(" ");
 						}
 						
+						int linha = 1;
+						while (linha <= 4)
+						{
+							int numero07 = linha;
+							int count = 1;
+							while (count <= linha)
+							{
+								Console.Write(numero07);
+								count++;
+							}
+							Console.WriteLine();
+							linha++;
+						}
 						Console.ReadKey(true);
 						break;
 						
@@ -643,6 +687,21 @@ namespace Lista_level_2
 						for (int i = 1; i <= numero04; i++) {
 							Console.WriteLine("{0}\nx\n{1}\n=\n{2}\n",i, numero04, i * numero04);
 						}
+						
+						int v = 1;
+						while (v <= numero04)
+						{
+							int j = 1;
+							while (j <= 10)
+							{
+								Console.WriteLine("{0} x {1} = {2}", v, j, v*j);
+								j++;
+							}
+							v++;
+							Console.WriteLine();
+						}
+						
+
 						Console.ReadKey(true);
 						break;
 						
