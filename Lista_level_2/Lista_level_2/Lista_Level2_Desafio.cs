@@ -3,7 +3,7 @@ using System;
 
 namespace Lista_level_2
 {
-	class Program
+	class Lista_Level2_Desafio
 	{
 		public static void Main(string[] args)
 		{
@@ -495,8 +495,10 @@ namespace Lista_level_2
 						int numero01 = int.Parse(Console.ReadLine());
 						
 						for (int i = 1; i <= numero01; i++) {
-							Console.WriteLine("{0} x {1} = {2}", i, numero01, i * numero01);
+							Console.WriteLine("{0} x {1} = {2}", numero01, i, i * numero01);
 						}
+						Console.ReadKey(true);
+						
 						int h = 1;
 						while (h <= 10) {
 							Console.WriteLine("{0} x {1} = {2}", numero01, h, numero01 * h);
