@@ -382,8 +382,6 @@ namespace Lista_level_2
 							Console.WriteLine("\nA soma de todos números será: {0}", soma40);
 						}
 						
-						
-						
 						Console.ReadKey(true);
 						break;
 						
@@ -430,19 +428,38 @@ namespace Lista_level_2
 						int num = 0;
 						float media = 0.0f;
 						float soma = 0.0f;
+						int num6 = 0;
 						
-						Console.WriteLine("Insira 10 números para somar e encontrar a média: ");
-						for (int i = 1; i <= 10; i++) {
-							Console.Write("{0}° Número: ", i);
-							num = int.Parse(Console.ReadLine());
-							soma += num;
+						Console.WriteLine("Escolha uma opção: ");
+						Console.WriteLine("1) For\n2) While");
+						int escolha2 = int.Parse(Console.ReadLine());
+						
+						if (escolha2 == 1) {
 							
+							for (int i = 1; i <= 10; i++) {
+								Console.Write("{0}° Número: ", i);
+								num = int.Parse(Console.ReadLine());
+								soma += num;
+								
+							}
+							
+							media = soma / 10;
+							
+							Console.WriteLine("A soma destes números é: {0}", soma);
+							Console.WriteLine("A média destes números é: {0}", media);
+							
+						} else if (escolha2 == 2) {
+							Console.WriteLine("Insira 10 números para somar e encontrar a média: ");
+							while (num6 <= 10) {
+								
+								soma += num;
+							}
+							media = soma / 10;
+							
+							Console.WriteLine("A soma destes números é: {0}", soma);
+							Console.WriteLine("A média destes números é: {0}", media);
 						}
 						
-						media = soma / 10;
-						
-						Console.WriteLine("A soma destes números é: {0}", soma);
-						Console.WriteLine("A média destes números é: {0}", media);
 						
 						Console.ReadKey(true);
 						break;
@@ -461,6 +478,10 @@ namespace Lista_level_2
 							cubo = i * i * i;
 							Console.WriteLine("{0}³ é igual à {1}", i, cubo);
 						}
+						int w = 1;
+						while (w <= numero) {
+							Console.WriteLine("Cubo de {0}: {1}", w, Math.Pow(w, 3));
+						}
 						Console.ReadKey(true);
 						break;
 						
@@ -475,6 +496,10 @@ namespace Lista_level_2
 						
 						for (int i = 1; i <= numero01; i++) {
 							Console.WriteLine("{0} x {1} = {2}", i, numero01, i * numero01);
+						}
+						int h = 1;
+						while (h <= 10) {
+							Console.WriteLine("{0} x {1} = {2}", numero01, h, numero01 * h);
 						}
 						Console.ReadKey(true);
 						break;
@@ -495,6 +520,16 @@ namespace Lista_level_2
 							}
 						}
 						Console.WriteLine("A soma dos números ímpares: {0}", somaNimpar);
+						
+						int o = 1;
+						int soma1 = 0;
+						while (o <= numeros02) {
+							int impar = 2 * o - 1;
+							Console.WriteLine(impar);
+							soma1 += impar;
+							impar++;
+						}
+						Console.WriteLine("A soma dos números ímpares: {0}", soma1);
 						Console.ReadKey(true);
 						break;
 						
@@ -616,23 +651,47 @@ namespace Lista_level_2
 						último dígito de qualquer número.*/
 						
 						Console.WriteLine("Atividade 20");
-						Console.Write("Digite um número: ");
-						int num01 = int.Parse(Console.ReadLine());
+						int num9 = 0;
+						int sum, primeiroD, ultimoD = 0;
 						
-
-						int ultiDigit = num01 % 10;
-						int primDigit = num01;
+						Console.WriteLine("Escolha uma opção: ");
+						Console.WriteLine("1) For\n2) While");
+						int escolha3 = int.Parse(Console.ReadLine());
 						
-						for (; primDigit >= 10; primDigit /= 10) {}
 						
-						int sum = primDigit + ultiDigit;
-						int lastDigit = num01 % 10;
-						int firstDigit = num01;
+						if (escolha3 == 1) {
+							Console.WriteLine("Digite qualquer número inteiro: ");
+							num9 = int.Parse(Console.ReadLine());
+							
+							ultimoD = num9 % 10;
+							
+							Console.WriteLine("Este é o ultimo digito: {0}", ultimoD);
+							
+							for (int i = 0; num9 >= 10; i++) {
+								num9 /= 10;
+								Console.WriteLine("Digito: {0}", num9);
+							}
+							primeiroD = num9;
+							sum = primeiroD + ultimoD;
+							Console.WriteLine("Soma do primeiro digito ({0}) e do ultimo digito ({1}) é: {2}",primeiroD, ultimoD, sum);
+							
+						} else if (escolha3 == 2) {
+							Console.WriteLine("Digite qualquer número inteiro: ");
+							num9 = int.Parse(Console.ReadLine());
+							
+							ultimoD = num9 % 10;
+							
+							Console.WriteLine("Este é o ultimo digito: {0}", ultimoD);
+							
+							while (num9 >= 10) {
+								num9 /= 10;
+							}
+							
+							primeiroD = num9;
+							sum = primeiroD + ultimoD;
+							Console.WriteLine("Soma do primeiro digito ({0}) e do ultimo digito ({1}) é: {2}",primeiroD, ultimoD, sum);
+						}
 						
-						for (; firstDigit >= 10; firstDigit /= 10) {}
-						
-						int sum1 = firstDigit + lastDigit;
-						Console.WriteLine("A soma do primeiro e do último dígito é: {0}", sum1);
 						Console.ReadKey(true);
 						break;
 					case 0:
